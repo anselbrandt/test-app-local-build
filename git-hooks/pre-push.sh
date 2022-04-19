@@ -9,3 +9,5 @@ dokku tags:deploy test-app
 docker system prune -a
 y
 HERE
+
+exit 0
