@@ -1,8 +1,10 @@
-# Dokku Test-App Deploying to Digitalocean
+# Dokku Test-App Local Build Deploying to Digitalocean
 
-This repo uses the [dokku-deploy-action](https://github.com/marketplace/actions/dokku-deploy-action) workflow.
+Copy the contents of `git-hooks/pre-push.sh` to `.git/hooks/pre-push.sample` and rename to `pre-push`
 
-On `git push` a Github Action will be triggered to deploy this application to an existing Digitalocean Droplet.
+Modify the script with with your Docker Hub repo name, image name, Droplet domain/address, and Dokku app name.
+
+Ensure your Droplet is configured and accessible via SSH, and you are logged in to Docker Hub.
 
 Domain, proxying and SSL certificates should already be set up, and the application must be created.
 
