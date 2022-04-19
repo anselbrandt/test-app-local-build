@@ -35,19 +35,3 @@ dokku certs:add <app-name> < cert-key.tar
 Alternatively, you can use the [dokku-letsencrypt](https://github.com/dokku/dokku-letsencrypt) pluggin.
 
 \*letsencrypt will rate limit to 5 API calls per 7 day period.
-
-### Config
-
-`.github/workflows/dokku.yml` must point to the correct branch (eg. master or main), `dokku-host` (domain), and `app-name`
-
-### Github
-
-An SSH key with access to your Droplet will need to be added to Repository Secrets as `SSH_PRIVATE_KEY`
-
-### Notes
-
-This workflow builds your image locally.
-
-The standard workflow builds images on your Droplet.
-
-[https://github.com/anselbrandt/test-app](https://github.com/anselbrandt/test-app)
